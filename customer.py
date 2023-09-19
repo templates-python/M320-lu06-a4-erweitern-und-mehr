@@ -45,7 +45,6 @@ class Customer(Person):
         super().print()
         print(f'\t\tKundenberater: {self._client_advisor.name}\t{self._client_advisor.phone}')
 
-
 #Test
 if __name__ == '__main__':
     e = Employee('Max', 44, '455.45.T', '099-345-332-123')

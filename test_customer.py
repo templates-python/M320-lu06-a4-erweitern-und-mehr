@@ -22,7 +22,7 @@ class TestCustomer:
         assert customer.client_advisor.name == 'Ahmed'
 
     def test_print(self, customer, capsys):
-        customer.address = 'Neustadt'
+        customer.address = 'Altstadt'
         customer.print()
         captured = capsys.readouterr()
         assert captured.out == 'Person: Carla\n\tAlter: 30\n\tAdresse: Neustadt\n\t\tKundenberater: Robin\t011 111 11 11\n'
