@@ -12,7 +12,7 @@ class TestCustomer:
     def customer(self, employee):
         return Customer('Carla', 30, employee)
 
-    def test_initialisation(self, customer, employee):
+    def test_customer_initialisation(self, customer, employee):
         assert customer.name == 'Carla'
         assert customer.age == 30
         assert customer.client_advisor == employee
@@ -21,9 +21,9 @@ class TestCustomer:
         customer.client_advisor = Employee('Ahmed', 40, '225.23', '+54 782 12 23 55 6')
         assert customer.client_advisor.name == 'Ahmed'
 
-    def test_print(self, customer, capsys):
-        customer.address = 'Neustadt'
+    def test_customer_print(self, customer, capsys):
+        customer.address = 'Altstadt'
         customer.print()
         captured = capsys.readouterr()
-        assert captured.out == 'Person: Carla\n\tAlter: 30\n\tAdresse: Neustadt\n\t\tKundenberater: Robin\t011 111 11 11\n'
+        assert captured.out == 'Person: Carla\n\tAlter: 30\n\tAdresse: Altstadt\n\t\tKundenberater: Robin\t011 111 11 11\n'
 
