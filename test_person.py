@@ -9,7 +9,7 @@ class TestPerson:
         return Person('Max', 33)
 
 
-    def test_initialisation(self, person):
+    def test_person_initialisation(self, person):
         assert person.name == 'Max'
         assert person.age == 33
 
@@ -17,7 +17,7 @@ class TestPerson:
         person.address = 'Dorf'
         assert person.address == 'Dorf'
 
-    def test_print(self, person, capsys):
+    def test_person_print(self, person, capsys):
         person.address = 'Testadresse'
         person.print()
         captured = capsys.readouterr()

@@ -12,7 +12,7 @@ class TestRegularCustomer:
     def customer(self, employee):
         return RegularCustomer('Carla', 30, employee)
 
-    def test_initialisation(self, customer, employee):
+    def test_regular_customer_initialisation(self, customer, employee):
         assert customer.name == 'Carla'
         assert customer.age == 30
         assert customer.client_advisor == employee
@@ -21,7 +21,7 @@ class TestRegularCustomer:
         customer.discount = 3.3
         assert customer.discount == 3.3
 
-    def test_print(self, customer, capsys):
+    def test_regular_customer_print(self, customer, capsys):
         customer.address = 'Neustadt'
         customer.discount = 5.1
         customer.print()

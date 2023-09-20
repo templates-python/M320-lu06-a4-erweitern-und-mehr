@@ -7,7 +7,7 @@ class TestEmployee:
     def employee(self):
         return Employee('Mia', 22, '722.56-8', '099 999 99 99')
 
-    def test_initialisation(self, employee):
+    def test_employee_initialisation(self, employee):
         assert employee.name == 'Mia'
         assert employee.age == 22
         assert employee.pers_nr == '722.56-8'
@@ -17,7 +17,7 @@ class TestEmployee:
         employee.salary = 2000
         assert employee.salary == 2000
 
-    def test_print(self, employee, capsys):
+    def test_employee_print(self, employee, capsys):
         employee.address = 'Musterdorf'
         employee.salary = 5000
         employee.print()
