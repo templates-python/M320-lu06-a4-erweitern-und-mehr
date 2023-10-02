@@ -2,6 +2,7 @@ import pytest
 from employee import Employee
 from regular_customer import RegularCustomer
 
+
 class TestRegularCustomer:
 
     @pytest.fixture
@@ -27,4 +28,3 @@ class TestRegularCustomer:
         customer.print()
         captured = capsys.readouterr()
         assert captured.out == 'Person: Carla\n\tAlter: 30\n\tAdresse: Neustadt\n\t\tKundenberater: Robin\t011 111 11 11\n\t\tStammkunde mit 5.1% Rabatt\n'
-

@@ -48,8 +48,8 @@ class RegularCustomer(Customer):
 
 #Test
 if __name__ == '__main__':
-   e = Employee('Max', 2000, '455.45.T', '099-345-332-123')
-   r = RegularCustomer('Pia', 1980, e)
-   r.address  = 'Oberdorf'
-   r.discount = 2.4
-   r.print()
+   employee = Employee('Max', 2000, '455.45.T', '099-345-332-123')
+   regular = RegularCustomer('Pia', 1980, employee)
+   regular.address  = 'Oberdorf'
+   regular.discount = 2.4
+   regular.print()
